@@ -1,4 +1,5 @@
 from flask import Flask, redirect, url_for, jsonify, request, render_template
+import random
 
 app = Flask(__name__)
 
@@ -25,6 +26,15 @@ def user_greeting(name):
 def hello_view(name):
     dict = {'title':name, 'cond':1}
     return render_template('hello.html', obj = dict)
+
+@app.route('/data')
+def return_json_data():
+    data = {'position1': random.randint(1,100), 'position2': random.randint(1,100), 'position3': random.randint(1,100), 'position4': random.randint(1,100)}
+    return jsonify(data)
+
+@app.route('/charts')
+def render_charts_view():
+    return render_template('charts.html')
 
 if __name__ == '__main__':
     app.run(debug=True)
