@@ -1,3 +1,24 @@
+$(document).ready( function() {
+    var words = [
+        {text: "Cartão", weight: 60},
+        {text: "Excelente", weight: 20},
+        {text: "Horas", weight: 15},
+        {text: "bom", weight: 4},
+        {text: "demorou", weight: 7},
+        {text: "adorei", weight: 8},
+        {text: "cancelar", weight: 2},
+        {text: "fechar", weight: 1}
+      ];
+      
+      var config = {
+        width: 500,
+        height: 350,
+        shape: 'rectangular'
+      }
+
+      $('#wordcloud').jQCloud(words, config);
+})
+
 // Load the Visualization API and the piechart package.
 google.charts.load("current", { packages: ["corechart"] });
 
@@ -46,3 +67,5 @@ function getDataFromServer() {
 
   return data;
 }
+
+
