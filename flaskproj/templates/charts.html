@@ -9,7 +9,7 @@
     <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
     <script type="text/javascript" src="{{ url_for('static', filename='jqcloud.min.js')}}"></script>
     <link rel="stylesheet" href="{{ url_for('static', filename='jqcloud.min.css')}}">
-    
+
     <script type="text/javascript" src="{{ url_for('static', filename='charts.js')}}"></script>
 
     <title>Charts</title>
@@ -20,7 +20,8 @@
     <button onclick="reload()">RELOAD</button>
 
     <h2 style="margin-top: 50px">WORD CLOUD</h2>
-    <div id="wordcloud"></div>
+    <div id="wordcloud" style="font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif"></div>
+    <button onclick="reloadWords()">RELOAD</button>
 </body>
 </html>
 

@@ -32,6 +32,24 @@ def return_json_data():
     data = {'position1': random.randint(1,100), 'position2': random.randint(1,100), 'position3': random.randint(1,100), 'position4': random.randint(1,100)}
     return jsonify(data)
 
+@app.route('/words')
+def return_words_for_cloud():
+    data = {
+        'Cartão': random.randint(1,500),
+        'Bom': random.randint(1,500),
+        'Adorei': random.randint(1,500),
+        'lento': random.randint(1,500),
+        'NÃO': random.randint(1,500),
+        'consegui': random.randint(1,500),
+        'Excelente': random.randint(1,500),
+        'xpto': random.randint(1,500),
+        'banco': random.randint(1,500),
+        'demorou': random.randint(1,500),
+        'rápido': random.randint(1,500),
+        'ruim': random.randint(1,500),
+    }
+    return jsonify(data)
+
 @app.route('/charts')
 def render_charts_view():
     return render_template('charts.html')
