@@ -2,9 +2,9 @@ $(document).ready(function() {
     let words = getWordsInServer();
 
     let config = {
-      width: 500,
-      height: 350,
-      shape: "rectangular"
+        width: 500,
+        height: 350,
+        shape: "rectangular"
     };
   
     $("#wordcloud").jQCloud(words, config);
@@ -27,7 +27,7 @@ function drawChart() {
   console.log("drawing...");
 
   chart = new google.visualization.PieChart(
-    document.getElementById("chart_div")
+    document.getElementById("pie_chart")
   );
 
   var options = {

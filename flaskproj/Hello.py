@@ -47,12 +47,44 @@ def return_words_for_cloud():
         'demorou': random.randint(1,500),
         'rápido': random.randint(1,500),
         'ruim': random.randint(1,500),
+        'fila': random.randint(1,500),
+        'atendimento': random.randint(1,500),
+        'amei': random.randint(1,500),
+        'maravilhoso': random.randint(1,500),
+        'moroso': random.randint(1,500),
+        'crítico': random.randint(1,500),
+        'importante': random.randint(1,500),
+        'mais': random.randint(1,500),
+        'totalmente': random.randint(1,500),
+        'claro': random.randint(1,500),
+        'melhor': random.randint(1,500),
+        'pior': random.randint(1,500),
+        'bravo': random.randint(1,500),
+        'animada': random.randint(1,500),
+        'Correria': random.randint(1,500),
+        'outro': random.randint(1,500),
+        'pode': random.randint(1,500),
+        'melhorar': random.randint(1,500),
+        'texto': random.randint(1,500),
+        'andando': random.randint(1,500),
+        'pulo': random.randint(1,500),
+        'atendente': random.randint(1,500),
+        'fraco': random.randint(1,500),
+        'forte': random.randint(1,500),
+        'passagem': random.randint(1,500),
+        'next': random.randint(1,500),
+        'regular': random.randint(1,500),
+        'feliz': random.randint(1,500),
     }
     return jsonify(data)
 
 @app.route('/charts')
 def render_charts_view():
     return render_template('charts.html')
+
+@app.route('/dashboard')
+def render_dashboard_view():
+    return render_template('dashboard.html')
 
 if __name__ == '__main__':
     app.run(debug=True)
