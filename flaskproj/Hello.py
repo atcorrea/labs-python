@@ -4,8 +4,8 @@ import random
 app = Flask(__name__)
 
 @app.route('/hello/<name>')
-def hello_world(name):
-    if name == 'admin':
+def hello_world(nome):
+    if nome == 'admin':
         return redirect(url_for('admin_greeting'))
     else:
         return redirect(url_for('user_greeting', name = name))
