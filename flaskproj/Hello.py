@@ -86,5 +86,9 @@ def render_charts_view():
 def render_dashboard_view():
     return render_template('dashboard.html')
 
+@app.route('/dashboard2')
+def render_dashboard2_view():
+    return render_template('dashboard2.html')
+
 if __name__ == '__main__':
     app.run(debug=True)
